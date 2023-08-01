@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from app.views import *
+from app3.views import *
 import app1,app2
 
 urlpatterns = [
@@ -25,4 +26,5 @@ urlpatterns = [
     path('page2/',page2,name='page2'),
     path('app1/',include('app1.urls')),
     path('app2/',include('app2.urls')),
+    path('hobbies/',hobbies,name='hobbies'),
 ]
